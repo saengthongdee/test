@@ -1,0 +1,25 @@
+.video {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to left top,
+    rgb(202, 78, 6),
+    rgb(202, 78, 6),
+    rgb(254, 184, 71)
+  );
+
+  .box {
+    width: auto;
+    height: 80%;
+
+    video{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+  }
+}
