@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-function page() {
+function nav() {
   return (
     <div>
        <nav>
@@ -19,4 +19,4 @@ function page() {
   )
 }
 
-export default page
+export default nav

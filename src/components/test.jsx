@@ -5,12 +5,13 @@ import "./style.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function App() {
+function video() {
   const bottleRef = useRef();
   const textRef = useRef();
 
   const boxred = useRef();
   const boxgreen = useRef();
+  const fantaRef = useRef();
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -34,9 +35,17 @@ function App() {
         gsap.fromTo(
           bottleRef.current,
           { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, ease: "back.out(1.7)" }
+          { y: 0, opacity: 1, delay: 1, duration: 1, ease: "back.out(1.7)" }
         );
+
+        gsap.fromTo(
+          fantaRef.current,
+          {y:100, opacity:0},
+          {y:0 , opacity:1, duration: 1, ease:"circ.inOut"}
+        )
       },
+
+      
 
       "(max-width: 480px)": function () {
         gsap.set(bottleRef.current, {
@@ -127,7 +136,7 @@ function App() {
     <div className="container">
       <section className="hero">
         <div className="text-overlay">
-          <h2>fanta</h2>
+          <h2 ref={fantaRef}>fanta</h2>
           <img className="b" src="/b.webp" alt="" />
           <img className="lemon" src="/lemon.webp" alt="" />
         </div>
@@ -190,4 +199,4 @@ function App() {
   );
 }
 
-export default App;
+export default video;

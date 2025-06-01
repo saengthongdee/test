@@ -15,11 +15,10 @@ function page() {
       {
         scale: 1,
         duration: 1,
-        delay: 2,
         scrollTrigger: {
           trigger: videoRef.current,
           start: "top 80%",
-          end: "bottom 80%",
+          end: "bottom 50%",
           toggleActions: "play reverse play reverse",
         },
       }
