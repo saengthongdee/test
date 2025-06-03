@@ -34,11 +34,31 @@ function page() {
       <section className="about-container">
         <h1>About us</h1>
         <div className="box-about">
-          <img src="/b.webp" alt="" />
-          <img src="/b.webp" alt="" />
-          <img src="/lemon.webp" alt="" />
-          <img src="/b.webp" alt="" />
-          <img src="/lemon.webp" alt="" />
+          <img
+            src="/b.webp"
+            alt="แฟนต้ารสส้ม น้ำอัดลมกลิ่นส้มซ่า สดชื่น"
+            loading="lazy"
+            itle="แฟนต้ารสส้ม น้ำอัดลม Fanta Orange"
+          />
+          <img
+            src="/b.webp"
+            alt="แฟนต้ารสส้ม น้ำอัดลมกลิ่นส้มซ่า สดชื่น"
+            loading="lazy"
+            itle="แฟนต้ารสส้ม น้ำอัดลม Fanta Orange"
+          />
+          <img
+            src="/lemon.webp"
+            alt="น้ำมะนาวสด น้ำผลไม้เพื่อสุขภาพ รสเปรี้ยวธรรมชาติ"
+            loading="lazy"
+            itle="แฟนต้ารสส้ม น้ำอัดลม Fanta Orange"
+          />
+          <img src="/b.webp" alt="แฟนต้ารสส้ม น้ำอัดลมกลิ่นส้มซ่า สดชื่น" />
+          <img
+            src="/lemon.webp"
+            alt="น้ำมะนาวสด น้ำผลไม้เพื่อสุขภาพ รสเปรี้ยวธรรมชาติ"
+            loading="lazy"
+            itle="แฟนต้ารสส้ม น้ำอัดลม Fanta Orange"
+          />
 
           <div className="box">
             <h2>Colorful Bubbles of Fun</h2>

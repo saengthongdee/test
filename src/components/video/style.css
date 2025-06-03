@@ -21,6 +21,14 @@
         height: 100%;
         border-radius: 10px;
     }
+    p{
+      width: 100%;
+      text-align: center;
+      padding: 3rem 0;
+      font-size: 16px;
+      color: #fff;
+      display: none;
+    }
   }
 }
 

@@ -336,7 +336,9 @@
       .buy {
         bottom: 0;
         border-radius: 0px;
-        border: 2px solid rgb(62, 62, 62);
+        width: 100px;
+        height: 35px;
+        border: 1px solid rgb(62, 62, 62);
       }
       #bo-center {
         bottom: 0rem;

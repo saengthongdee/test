@@ -38,6 +38,9 @@ function page() {
             playsInline
             className="video-bg"
           ></video>
+          <p class="video-description">
+           Fanta Orange promotional video – Refreshing, fizzy, and full of flavor. Brighten up your day with every sip!
+          </p>
         </div>
       </section>
     </div>
