@@ -49,15 +49,12 @@
         z-index: 1;
       }
     }
-    .bottle-container {
+
+    .bottle {
+      width: 450px;
+      height: auto;
       z-index: 10;
-      .bottle {
-        width: 450px;
-        height: auto;
-        z-index: 10;
-        transform: scale(0.9);
-        
-      }
+      transform: scale(0.9);
     }
   }
 }

@@ -140,14 +140,14 @@ function video() {
           <img className="b" src="/b.webp" alt="" />
           <img className="lemon" src="/lemon.webp" alt="" />
         </div>
-        <div className="bottle-container" ref={bottleRef}>
-          <img
+       
+          <img ref={bottleRef}
             src="/fantaorangeimage.webp"
             alt="ขวดแฟนต้าส้ม เครื่องดื่มน้ำอัดลม"
             className="bottle"
               fetchpriority="high"
           />
-        </div>
+
       </section>
 
       <section className="content">
