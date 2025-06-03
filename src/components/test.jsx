@@ -55,21 +55,23 @@ function video() {
       { y: 0, opacity: 1, duration: 1, ease: "circ.inOut" }
     );
 
-    gsap.fromTo(
-      textRef.current,
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 50%",
-          end: "bottom 80%",
-          toggleActions: "play reverse play reverse",
-        },
-      }
-    );
+    if (window.innerWidth >= 1024) {
+      gsap.fromTo(
+        textRef.current,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 50%",
+            end: "bottom 80%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    }
 
     if (window.innerWidth >= 1024) {
       gsap.fromTo(
@@ -140,14 +142,13 @@ function video() {
           <img className="b" src="/b.webp" alt="" />
           <img className="lemon" src="/lemon.webp" alt="" />
         </div>
-       
-          <img ref={bottleRef}
-            src="/fantaorangeimage.webp"
-            alt="ขวดแฟนต้าส้ม เครื่องดื่มน้ำอัดลม"
-            className="bottle"
-              fetchpriority="high"
-          />
 
+        <img
+          ref={bottleRef}
+          src="/fantaorangeimage.webp"
+          alt="ขวดแฟนต้าส้ม เครื่องดื่มน้ำอัดลม"
+          className="bottle"
+        />
       </section>
 
       <section className="content">
