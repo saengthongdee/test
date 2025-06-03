@@ -131,10 +131,34 @@
       font-size: 50px;
       color: #fff;
       transition: 0.25s ease-in-out;
-
-      &:hover {
-        transform: translateY(-20px);
-      }
     }
   }
 }
+@media (min-width: 610px) and (max-width: 1024px) {
+  .contact-container{
+    height: 80vh;
+   img{
+      display: none;
+   }
+  } 
+}
+@media (max-width: 610px) {
+  .contact-container{
+    height: 80vh;
+   img{
+      display: none;
+   }
+   h1{
+    font-size: 22px;
+   }
+   .box-icon{
+      padding: 0;
+      gap:3rem;
+
+      .icon{
+        font-size: 30px;
+      }
+    }
+  } 
+}
+

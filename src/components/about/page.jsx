@@ -8,25 +8,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 function page() {
   useEffect(() => {
-
     const boxes = document.querySelectorAll(".box");
-
-    boxes.forEach((item, index) => {
-      gsap.fromTo(
-        item,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1 ,
-          scrollTrigger: {
-            trigger: item,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
-    });
+    if (window.innerWidth >= 1024) {
+      boxes.forEach((item, index) => {
+        gsap.fromTo(
+          item,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: item,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    }
   }, []);
 
   return (

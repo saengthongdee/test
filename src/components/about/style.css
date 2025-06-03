@@ -71,7 +71,6 @@
 
     .box {
       padding: 2rem;
-      background: transparent;
       display: flex;
       gap: 2rem;
       flex-direction: column;
@@ -99,6 +98,102 @@
       p {
         text-align: center;
         color: #fff;
+      }
+    }
+  }
+}
+
+@media (min-width: 610px) and (max-width: 1024px) {
+  .about-container{
+    display: flex;
+    height: auto;
+    padding: 2rem 0 0 0;
+         background: linear-gradient(
+        to bottom,
+        rgb(202, 78, 6),
+        rgb(202, 78, 6),
+        rgb(254, 184, 71)
+      );
+    
+    .box-about{
+      width: 100%;
+      grid-template-columns: 1fr;
+      /* background-color: rgb(202, 78, 6); */
+      padding: 3rem 0 0 0;
+      gap: 0;
+      background: transparent;
+      
+      .box{
+        padding: 3rem 0;
+        background: none;
+        border: none;
+
+        background: transparent;
+        border-radius: 0px;
+        border-bottom: 1.5px solid #fff;
+        box-shadow: none;
+        h2{
+          width: 50%;
+          background: none;
+          color: #fff;
+          border-radius: 0;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid #fff;
+        }
+        p{
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 610px) {
+  .about-container{
+    display: flex;
+    height: auto;
+    padding: 2rem 0 0 0;
+         background: linear-gradient(
+        to bottom,
+        rgb(202, 78, 6),
+        rgb(202, 78, 6),
+        rgb(254, 184, 71)
+      );
+    
+      h1{
+        font-size: 18px;
+      }
+    .box-about{
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0;
+      background: transparent;
+      
+      img{
+        display: none;
+      }
+      .box{
+        padding: 3rem 0;
+        background: none;
+        border: none;
+
+        background: transparent;
+        border-radius: 0px;
+        border-bottom: 1.5px solid #fff;
+        box-shadow: none;
+        h2{
+          width: 80%;
+          background: none;
+          color: #fff;
+          border-radius: 0;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid #fff;
+          font-size: 16px;
+        }
+        p{
+          width: 80%;
+          font-size: 14.5px;
+        }
       }
     }
   }

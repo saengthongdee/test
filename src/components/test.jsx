@@ -15,19 +15,19 @@ function video() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 481px)": function () {
+      "(min-width: 1025px)": function () {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".hero",
             start: "top top",
-            end: "bottom+=750 top",
+            end: "bottom+=720 top",
             pin: bottleRef.current,
             scrub: true,
             pinSpacing: true,
           },
         });
 
-        tl.to(bottleRef.current, { x: -450, rotateZ: 10, duration: 1 });
+        tl.to(bottleRef.current, { x: -400, rotateZ: 10, duration: 1 });
         tl.to(bottleRef.current, { rotateZ: 0, duration: 1 });
         tl.to(bottleRef.current, { x: 0, rotateZ: 10, duration: 1 }, "+=0.5");
         tl.to(bottleRef.current, { rotateZ: 0, duration: 1, scale: 0.8 });
@@ -37,12 +37,6 @@ function video() {
           { y: 50, opacity: 0 },
           { y: 0, opacity: 1, delay: 1, duration: 1, ease: "back.out(1.7)" }
         );
-
-        gsap.fromTo(
-          fantaRef.current,
-          {y:100, opacity:0},
-          {y:0 , opacity:1, duration: 1, ease:"circ.inOut"}
-        )
       },
 
       
@@ -56,6 +50,12 @@ function video() {
         });
       },
     });
+
+     gsap.fromTo(
+          fantaRef.current,
+          {y:100, opacity:0},
+          {y:0 , opacity:1, duration: 1, ease:"circ.inOut"}
+        );
 
     gsap.fromTo(
       textRef.current,
@@ -72,8 +72,10 @@ function video() {
         },
       }
     );
+     
 
-    gsap.fromTo(
+    if (window.innerWidth >= 1024){
+      gsap.fromTo(
       boxred.current,
       { x: -200 , rotateZ: 10},
       {
@@ -106,6 +108,7 @@ function video() {
         },
       }
     );
+    }
   }, []);
 
   useEffect(() => {
@@ -151,7 +154,8 @@ function video() {
       <section className="content">
         <div className="image">
           <div className="box-img">
-            <img src="/bg-orang.webp" alt="" />
+            <img className="fantaorange-ipad" src="/fantaOrange.webp" alt="" />
+            <img  src="/bg-orang.webp" alt="" />
           </div>
         </div>
         <div className="text" ref={textRef}>
@@ -182,6 +186,11 @@ function video() {
         </div>
 
         <div className="box">
+          <img
+            src="/fantaorangeimage.webp"
+            alt="ขวดแฟนแอปเปิลเขียว เครื่องดื่มน้ำอัดลม"
+            className="bottle ipad"
+          />
           <button className="buy" id="bo-center">
             Buy now
           </button>

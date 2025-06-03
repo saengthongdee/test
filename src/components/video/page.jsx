@@ -9,20 +9,22 @@ function page() {
   const videoRef = useRef();
 
   useEffect(() => {
-    gsap.fromTo(
-      videoRef.current,
-      { scale: 0.8 },
-      {
-        scale: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: videoRef.current,
-          start: "top 80%",
-          end: "bottom 50%",
-          toggleActions: "play reverse play reverse",
-        },
-      }
-    );
+    if (window.innerWidth > 1024) {
+      gsap.fromTo(
+        videoRef.current,
+        { scale: 0.8 },
+        {
+          scale: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: videoRef.current,
+            start: "top 80%",
+            end: "bottom 50%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+    }
   }, []);
   return (
     <div>

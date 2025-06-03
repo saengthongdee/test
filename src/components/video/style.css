@@ -23,3 +23,30 @@
     }
   }
 }
+
+
+@media (min-width: 610px) and (max-width: 1024px) {
+ .video{
+  height: auto;
+
+  .box{
+    width: 100%;
+  }
+ }
+}
+@media (max-width: 610px) {
+   .video{
+  height: auto;
+  border-radius: 0;
+
+  .box{
+    width: 100%;
+    border-radius: 0;
+
+    video{
+      height: auto;
+      border-radius: 0;
+    }
+  }
+ }
+}

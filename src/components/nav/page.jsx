@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import { FaHamburger } from "react-icons/fa";
 
 function nav() {
   return (
@@ -14,6 +15,7 @@ function nav() {
             <li><a href="">Brand</a></li>
             <li><a href="">Contect</a></li>
         </ul>
+        <FaHamburger className='icon'/>
        </nav>
     </div>
   )

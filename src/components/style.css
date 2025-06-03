@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f2f2f2;
-}
-
 .container {
   width: 100%;
   overflow-x: hidden;
@@ -71,10 +65,10 @@ body {
   background: #fff;
   padding: 4rem;
   font-size: 1.5rem;
-  background-color:  rgb(170, 64, 3);
+  background-color: rgb(170, 64, 3);
   display: flex;
 
-  .text{
+  .text {
     width: 50%;
     height: 100%;
     display: flex;
@@ -82,29 +76,32 @@ body {
     align-items: start;
     flex-direction: column;
     gap: 2rem;
-    
 
-    h2{
+    h2 {
       font-size: 48px;
       color: #fff;
     }
-    p{
+    p {
       width: 80%;
       font-size: 20px;
       color: #f3f3f3;
     }
   }
-  .image{
+  .image {
     width: 50%;
     height: 100%;
     display: flex;
     /* justify-content: center; */
     align-items: center;
 
-    .box-img{
+    .box-img {
       width: 600px;
 
-      img{
+      .fantaorange-ipad {
+        display: none;
+      }
+
+      img {
         width: 100%;
       }
     }
@@ -131,12 +128,15 @@ body {
     width: 350px;
     height: 350px;
     position: relative;
-    
 
     img {
       width: 100%;
       height: auto;
       transform: scale(0.9);
+    }
+
+    .ipad {
+      display: none;
     }
 
     &:nth-child(2) {
@@ -175,4 +175,172 @@ body {
 .buy.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (min-width: 610px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    .hero {
+      overflow: hidden;
+      .bottle {
+        position: absolute;
+        bottom: -12rem;
+        width: 600px;
+      }
+      .text-overlay {
+        h2 {
+          font-size: 10.5rem;
+        }
+        .b {
+          width: 150px;
+          top: 10rem;
+          left: 5rem;
+        }
+        .lemon {
+          width: 380px;
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    height: 80vh;
+
+    .image {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .box-img {
+        img {
+          filter: blur(15px);
+        }
+      }
+    }
+    .text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(-50%, -50%);
+      border: 1px solid red;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      h2 {
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .footer {
+    border: 1px solid red;
+    height: 80vh;
+
+    .box {
+      img {
+      }
+      .ipad {
+        display: block;
+        transform: scale(1.3);
+      }
+      .buy {
+        bottom: -3rem;
+      }
+      #bo-center {
+        bottom: -6rem;
+      }
+    }
+  }
+}
+@media (max-width: 610px) {
+  .container {
+    width: 100%;
+
+    .hero {
+      overflow: hidden;
+      .bottle {
+        position: absolute;
+        bottom: -5rem;
+        width: 350px;
+      }
+      .text-overlay {
+        h2 {
+          font-size: 5rem;
+        }
+        .b {
+          width: 150px;
+          bottom: -5rem;
+          left: 1rem;
+        }
+        .lemon {
+          width: 300px;
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    height: 80vh;
+    .image {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .box-img {
+        img {
+          filter: blur(15px);
+        }
+      }
+    }
+    .text {
+      width: 80%;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(-50%, -50%);
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 18px;
+        border-bottom: 3px solid rgb(255, 255, 255);
+        padding: 2rem;
+      }
+      p {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+  .footer {
+    padding: 0;
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+
+    .box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid rgba(221, 135, 42, 0.984);
+      img {
+        transform: scale(0.6);
+      }
+      .ipad {
+        display: block;
+      }
+
+      .buy {
+        bottom: 0;
+        border-radius: 0px;
+        border: 2px solid rgb(62, 62, 62);
+      }
+      #bo-center {
+        bottom: 0rem;
+      }
+    }
+  }
 }
