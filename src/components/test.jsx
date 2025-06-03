@@ -39,8 +39,6 @@ function video() {
         );
       },
 
-      
-
       "(max-width: 480px)": function () {
         gsap.set(bottleRef.current, {
           opacity: 1,
@@ -51,11 +49,11 @@ function video() {
       },
     });
 
-     gsap.fromTo(
-          fantaRef.current,
-          {y:100, opacity:0},
-          {y:0 , opacity:1, duration: 1, ease:"circ.inOut"}
-        );
+    gsap.fromTo(
+      fantaRef.current,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "circ.inOut" }
+    );
 
     gsap.fromTo(
       textRef.current,
@@ -72,42 +70,41 @@ function video() {
         },
       }
     );
-     
 
-    if (window.innerWidth >= 1024){
+    if (window.innerWidth >= 1024) {
       gsap.fromTo(
-      boxred.current,
-      { x: -200 , rotateZ: 10},
-      {
-        x: 0,
-        rotateZ:0,
-        ease: "power2.out",
-        duration: 1,
-        scrollTrigger: {
-          trigger: boxred.current,
-          start: "top 70%",
-          end: "bottom ",
-          toggleActions: "play reverse play reverse",
-        },
-      }
-    );
+        boxred.current,
+        { x: -200, rotateZ: 10 },
+        {
+          x: 0,
+          rotateZ: 0,
+          ease: "power2.out",
+          duration: 1,
+          scrollTrigger: {
+            trigger: boxred.current,
+            start: "top 70%",
+            end: "bottom ",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
 
-    gsap.fromTo(
-      boxgreen.current,
-      { x: 200 ,rotateZ: -10},
-      {
-        x: 0,
-        rotateZ: 0,
-        duration: 1,
-         ease: "power2.out",
-        scrollTrigger: {
-          trigger: boxred.current,
-          start: "top 70%",
-          end: "bottom ",
-          toggleActions: "play reverse play reverse",
-        },
-      }
-    );
+      gsap.fromTo(
+        boxgreen.current,
+        { x: 200, rotateZ: -10 },
+        {
+          x: 0,
+          rotateZ: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: boxred.current,
+            start: "top 70%",
+            end: "bottom ",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
     }
   }, []);
 
@@ -143,19 +140,21 @@ function video() {
           <img className="b" src="/b.webp" alt="" />
           <img className="lemon" src="/lemon.webp" alt="" />
         </div>
-        <img
-          ref={bottleRef}
-          src="/fantaorangeimage.webp"
-          alt="ขวดแฟนต้าส้ม เครื่องดื่มน้ำอัดลม"
-          className="bottle"
-        />
+        <div className="bottle-container" ref={bottleRef}>
+          <img
+            src="/fantaorangeimage.webp"
+            alt="ขวดแฟนต้าส้ม เครื่องดื่มน้ำอัดลม"
+            className="bottle"
+              fetchpriority="high"
+          />
+        </div>
       </section>
 
       <section className="content">
         <div className="image">
           <div className="box-img">
             <img className="fantaorange-ipad" src="/fantaOrange.webp" alt="" />
-            <img  src="/bg-orang.webp" alt="" />
+            <img src="/bg-orang.webp" alt="" />
           </div>
         </div>
         <div className="text" ref={textRef}>
